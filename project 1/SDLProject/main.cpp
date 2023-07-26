@@ -24,6 +24,8 @@
 #include "glm/gtc/matrix_transform.hpp"
 #include "ShaderProgram.h"
 #include "stb_image.h"
+#include <iostream>
+using namespace std;
 
 const int WINDOW_WIDTH  = 960,
           WINDOW_HEIGHT = 720;
@@ -97,6 +99,7 @@ GLuint load_texture(const char* filepath)
     if (image == NULL)
     {
         LOG("Unable to load image. Make sure the path is correct.");
+        cout << filepath;
         assert(false);
     }
     
